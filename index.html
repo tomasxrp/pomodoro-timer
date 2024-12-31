@@ -14,14 +14,16 @@
                 <button onclick="startFocus()">Focus</button>
                 <button onclick="startShortBreak()">Short Break</button>
                 <button onclick="startLongBreak()">Long Break</button>
+                <button onclick="autoMode()">Auto (2hrs)</button>
             </div>
 
-            <div class="timer">
-                <h1>25:01</h1>
+            <div class="timer" id="timer-display">
+                <h1>25:00</h1>
             </div>
             
             <div class="start-button-container">
-                <button class="start-button">Comenzar</button>
+                <button class="start-button" onclick="startTimer()" id="btn-start">Comenzar</button>
+                <button class="pause-button" onclick="resetTimer()" id="btn-reset">□</button>
             </div>
         </div>
 
