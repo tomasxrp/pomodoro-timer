@@ -6,16 +6,7 @@ const timerDisplay = document.querySelector('.timer h1');
 const startButton = document.getElementById('btn-start');
 const resetButton = document.getElementById('btn-reset');
 
-const pomodoroSession = [
-    10, // 25 minutes
-    2, // 5 minutes
-    10, // 25 minutes
-    300, // 5 minutes
-    1500,// 25 minutes
-    900, // 15 minutes
-    1500,
-    300
-]
+const sound = new Audio('./resource/alarma.mp3'); 
 
 
 function startTimer() {
@@ -28,20 +19,6 @@ function startTimer() {
         timerState = false;
         startButton.textContent = 'Comenzar';
     }
-}
-
-function startTimerAuto(){
-    if (timerState == false) {
-        timer = setInterval(updateTimer, 1000);
-        timerState = true;
-        startButton.textContent = 'Pausar';
-    } else {
-        clearInterval(timer);
-        timerState = false;
-        startButton.textContent = 'Comenzar';
-    }
-
-    
 }
 
 function resetTimer() {
@@ -61,8 +38,13 @@ function updateTimer() {
     }
     else{
         clearInterval(timer);
+        playSound();
     }
     
+}
+
+function playSound() {
+    sound.play();
 }
 
 
@@ -79,7 +61,7 @@ function startFocus(){
 
 function startShortBreak(){
     focusTime = 5;
-    focusTimeToSeconds = minuteToSeconds(focusTime);
+    focusTimeToSeconds = 2;
 
     displayTime(focusTimeToSeconds);
 }
@@ -89,22 +71,6 @@ function startLongBreak(){
     focusTimeToSeconds = minuteToSeconds(focusTime);
 
     displayTime(focusTimeToSeconds);
-}
-
-function autoMode(){
-    focusTimeToSeconds = pomodoroSession[0];
-    displayTime(focusTimeToSeconds);
-
-    startTimer();
-
-    console.log(focusTimeToSeconds);
-
-    if (focusTimeToSeconds == 0){
-        focusTimeToSeconds = pomodoroSession[1];
-        displayTime(focusTimeToSeconds);
-    }
-
-
 }
 
 
