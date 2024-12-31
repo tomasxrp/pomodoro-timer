@@ -14,5 +14,5 @@ function minuteToSeconds(minutes) {
 function startFocus(){
     focusTime = 25;
     focusTimeToSeconds = minuteToSeconds(focusTime);
-    startTimer();
+    
 }
