@@ -1,107 +1,83 @@
 *{
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body{
-    font-family: monospace;
-    background-color: #a31247;
+    background-color: #F2FFF5;
 }
 
-section{
+.pomodoro-timer{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100vh;
 }
 
-.timer-container{
+.main-content{
     display: flex;
     flex-direction: column;
-    background-color: #212732;
-    width: 30vw;
-    height: 50vh;
-}
-
-.button-options{
-    display: flex;
+    align-items: center;
     justify-content: center;
-    margin-top: 20px;
-    gap: 2rem;
-    margin: 5vh 2vw;
+    gap: 1rem;
 }
-
-.button-options button{
-    background-color: #a31247;
-    border-style: none;
-    padding: .4rem;
-    font-size: .8rem;
-    border-radius: 1rem;
-    color: white;
-    font-weight: 500;
-    text-transform: uppercase;
-    flex-grow: 1;
-    width: 30%;
-}
-
-.button-options button:hover{
-    transition: ease-in .2s;
-    background-color: #790e35;
-}   
 
 .timer{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 55%;
+    flex-direction: column;
 }
 
-.timer h1{
-    font-size: 4rem;
-    color: white;
+.current-mode{
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: .2rem .6rem;
+    border-radius: 1rem;
+    border: .08rem solid #31723e;
+    background-color: #b7cabc;
 }
 
-.start-button-container{
+.timer div{
+    font-size: 10rem;
+    font-weight: 800;
+    color: #14401D;
+    letter-spacing: -.1rem;
+}
+
+.buttons{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .7rem;
-}
+    gap: 1rem;
+}  
 
-.start-button{
-    width: 30%;
-    margin-top: -7rem;
-    border-style: none;
-    background-color: #941443;
-    color: #fff;
-    padding: .7rem;
-    border-radius: 1.05rem;
+.buttons .start{
+    background-color: #8CE8A1;
+    color: #F2FFF5;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    border: none;
 
 }
 
-.pause-button{
-    width: 10%;
-    margin-top: -7rem;
-    border-style: none;
-    background-color: #c34367;
-    color: #fff;
-    padding: .7rem;
-    border-radius: 50%;
-    font-size: .8rem;
+.buttons .reset{
+    background-color: #DAFAE0;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    border: none;
+
+}
+
+.buttons .next-mode{
+    background-color: #DAFAE0;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    border: none;
+
+}
+
+.buttons button:hover{
+    cursor: pointer;
+    background-color: #4d995c;
+    transition: .4s ease-in;
 }
 
 
-@media (max-width: 768px){
-    .timer-container{
-        width: 80vw;
-    }
-
-    .button-options{
-        margin: 5vh 7vw;
-    }
-
-    .button-options button{
-        width: 40%;
-    }
-}
