@@ -29,12 +29,12 @@ body{
 }
 
 .current-mode{
-    text-transform: uppercase;
-    font-weight: 400;
-    padding: .2rem .6rem;
+    background-color: #8CE8A1;
+    padding: 0.2rem 2rem;
     border-radius: 1rem;
-    border: .08rem solid #31723e;
-    background-color: #b7cabc;
+    border-style:none;
+    font-weight: 600;
+    color: #14401D;
 }
 
 .timer div{
@@ -50,7 +50,7 @@ body{
 }  
 
 .buttons .start{
-    background-color: #8CE8A1;
+    background-color: #296635;
     color: #F2FFF5;
     padding: 1.5rem;
     border-radius: .5rem;
@@ -58,8 +58,14 @@ body{
 
 }
 
+.buttons .start img{
+    src: url(/resource/play.png);
+    width: 1.5rem;
+    
+}
+
 .buttons .reset{
-    background-color: #DAFAE0;
+    background-color: #289c3f;
     padding: 1.5rem;
     border-radius: .5rem;
     border: none;
@@ -67,7 +73,7 @@ body{
 }
 
 .buttons .next-mode{
-    background-color: #DAFAE0;
+    background-color: #289c3f;
     padding: 1.5rem;
     border-radius: .5rem;
     border: none;
